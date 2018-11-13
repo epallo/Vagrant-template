@@ -1,0 +1,2 @@
+#!/bin/bash
+cd /vagrant && cat yes.pub >> ~/.ssh/authorized_keys

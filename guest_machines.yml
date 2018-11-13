@@ -1,0 +1,35 @@
+---
+- name: jenkins1
+  box: centos/7
+  cpus: 1
+  memory: 2048
+  private_ip: 10.0.10.10
+  package_manager: yum
+  packages:
+  - wget
+  - unzip
+  - git
+  - java
+  scripts:
+  - priv_key
+  - java_install        
+  - vim_config
+  - vim_config2
+
+- name: jenkins2
+  box: centos/7
+  cpus: 1
+  memory: 2048
+  private_ip: 10.0.10.11
+  package_manager: yum
+  packages:
+  - wget
+  - unzip
+  - git
+  - java
+  scripts:
+  - pub_key
+  - java_install        
+  - vim_config
+  - vim_config2
+...
